@@ -1,49 +1,15 @@
 <div class="contain">
 
+	<% @items.each do |item| %>
 		<div class="card" style="width: 18rem;">
-		  <img class="card-img-top" src="http://ppcdn.500px.org/21763493/3ac83dee3123c562616cd6a7d25b407ea21d9dd7/4.jpg" alt="Card image cap">
+		  <%= image_tag("#{item.image_url}", class: 'card-img-top', alt: "Card image cap") %>
 		  <div class="card-body">
-		    <h5 class="card-title">Card title</h5>
-		    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-		    <a href="#" class="btn btn-primary btnshadow">Go somewhere</a>
+		    <h5 class="card-title"><%= item.title %></h5>
+		    <p class="card-text"><%= item.description %></p>
+		    <a href="#" class="btn btn-primary btnshadow"><%= item.price %></a>
 		  </div>
 		</div>
-
-			<div class="card" style="width: 18rem;">
-		  <img class="card-img-top" src="http://ppcdn.500px.org/21763493/3ac83dee3123c562616cd6a7d25b407ea21d9dd7/4.jpg" alt="Card image cap">
-		  <div class="card-body">
-		    <h5 class="card-title">Card title</h5>
-		    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-		    <a href="#" class="btn btn-primary btnshadow">Go somewhere</a>
-		  </div>
-		</div>
-
-			<div class="card" style="width: 18rem;">
-		  <img class="card-img-top" src="http://ppcdn.500px.org/21763493/3ac83dee3123c562616cd6a7d25b407ea21d9dd7/4.jpg" alt="Card image cap">
-		  <div class="card-body">
-		    <h5 class="card-title">Card title</h5>
-		    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-		    <a href="#" class="btn btn-primary btnshadow">Go somewhere</a>
-		  </div>
-		</div>
-
-			<div class="card" style="width: 18rem;">
-		  <img class="card-img-top" src="http://ppcdn.500px.org/21763493/3ac83dee3123c562616cd6a7d25b407ea21d9dd7/4.jpg" alt="Card image cap">
-		  <div class="card-body">
-		    <h5 class="card-title">Card title</h5>
-		    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-		    <a href="#" class="btn btn-primary btnshadow">Go somewhere</a>
-		  </div>
-		</div>
-
-			<div class="card" style="width: 18rem;">
-		  <img class="card-img-top" src="http://ppcdn.500px.org/21763493/3ac83dee3123c562616cd6a7d25b407ea21d9dd7/4.jpg" alt="Card image cap">
-		  <div class="card-body">
-		    <h5 class="card-title">Card title</h5>
-		    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-		    <a href="#" class="btn btn-primary btnshadow">Go somewhere</a>
-		  </div>
-	</div>
+	<% end %>
 </div>
 
 <div class="page_number">
