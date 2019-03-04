@@ -1,0 +1,38 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.3;
+  margin: 20%;
+}
+
+a {
+	transition: 0.3s cubic-bezier(0.2, 0.8,0.2,1);
+}
+
+a:hover {
+	transform: translateY(-3px);
+	transition: 0.5s cubic-bezier(0.2, 0.8,0.2,1);
+}
+
+.card {
+  margin: 5% 2% 2% 2%;
+}
+
+.contain {
+  padding: 0% 10% 0% 10%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  justify-items: center;
+}
+
+.page_number{
+  padding: 5% 0% 0% 0%;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+.btnshadow:hover {
+  box-shadow: 0 10px 20px rgba(0,0,0, 0.20);
+  transition: 0.5s;
+}
