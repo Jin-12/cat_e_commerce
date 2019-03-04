@@ -65,7 +65,8 @@ a:hover {
 }
 
 .grille-1-show img{
-  border-radius: 2%;
+  background-size: cover;
+  background-position: center;
 }
 
 .grille-1-show img:hover{
