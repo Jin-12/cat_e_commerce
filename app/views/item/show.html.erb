@@ -1,12 +1,12 @@
 <div class='container-show'>
 	<div class="grille-1-show">
-		<img src="https://www.assuropoil.fr/wp-content/uploads/chartreux-race-chats.jpg" height="350px">
+		<%= image_tag("#{@item.image_url}", class: 'card-img-top', height: "350px") %>
 	</div>
 
 	<div class="grille-2-show">
-		<h1>Titre du produit</h1>
-		<p class="price-show"><b>Price : 30$</b></p>
-		<p>Description : Ceci est un exemple de description</p>
+		<h1><%= @item.title %></h1>
+		<p class="price-show"><b>Price : <%= @item.price %>$</b></p>
+		<p>Description : <%= @item.description %></p>
 		<button class="btn-buy-product">Ajouter au panier</button>
 	</div>
 </div>
