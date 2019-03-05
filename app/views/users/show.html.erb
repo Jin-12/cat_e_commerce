@@ -1,0 +1,10 @@
+<h1>Ma page de profil <%= @user.email %></h1>
+
+Vue par <%= current_user.email %> (id: <%= current_user.id %>), par le droit !
+
+<%= link_to 'Modifier mot de passe', edit_user_password_path %>
+
+<%= link_to "Edit settings", edit_user_registration_path %>
+
+<%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+
