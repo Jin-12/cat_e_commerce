@@ -1,7 +1,6 @@
 module ApplicationHelper
 end
 
-=begin
 ## Copié de l'app eventbrite olivier
   module ApplicationHelper
 
@@ -16,19 +15,11 @@ end
   end
   # REF https://www.railstutorial.org/book/rails_flavored_ruby#code-application_layout_full_title
   def full_title(page_title = '')
-    base_title = "evntMGMT"
+    base_title = "CatStore"
     if page_title.empty?
       base_title
     else
       page_title + " | " + base_title
     end
   end
-
-  def user_is_admin(user)
-    # SU is a global variable defining email of 'Super User"
-    # in config/initializers/my_constants.rb
-    user.email == SU ? true : false
-  end
 end
-
-=end

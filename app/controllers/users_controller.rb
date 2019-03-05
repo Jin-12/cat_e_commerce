@@ -14,5 +14,4 @@ class UsersController < ApplicationController
     end
     @user = User.find(params[:id])
   end
-  
 end
