@@ -1,5 +1,12 @@
 class JoinTableCartsItemsController < ApplicationController
+    before_action :create
+
+    def index
+        redirect_to cart_path(current_user.id)
+    end
+    
     def create
-        @link = JoinTableCartsItems.create(item_id: params[:item_id], cart_id: Cart(current_user.id))
+        @cart_user = User.find(current_user.id).cart.id
+        @link = JoinTableCartsItem.create(item_id: params[:item_id], cart_id: @cart_user)
     end
 end

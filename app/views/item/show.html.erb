@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-<div class='container-show'>
-	<div class="grille-1-show">
-		<%= image_tag("#{@item.image_url}", class: 'card-img-top', height: "350px") %>
-	</div>
-
-	<div class="grille-2-show">
-		<h1><%= @item.title %></h1>
-		<p class="price-show"><b>Price : <%= @item.price %>$</b></p>
-		<p>Description : <%= @item.description %></p>
-		<%= link_to "Ajouter au panier", {:controller => "join_table_carts_items", :action => "create", :item_id => @item.id, class:"btn-buy-product"} %>
-	</div>
-=======
 <div class="container">
 
   <!-- Portfolio Item Heading -->
@@ -32,7 +19,8 @@
       <ul>
         <li>Price : <%= @item.price %>$</li>
       </ul>
-      <button class="btn-buy-product">Ajouter au panier</button>
+      <%= link_to "Ajouter au panier", {:controller => "join_table_carts_items", :action => "create", :item_id => @item.id, class:"btn-buy-product"} %>
+
     </div>
 
   </div>
@@ -70,5 +58,4 @@
   </div>
   <!-- /.row -->
 
->>>>>>> delivery
 </div>
