@@ -6,7 +6,7 @@
 		  <div class="card-body">
 		    <h5 class="card-title"><%= item.title %></h5>
 		    <p class="card-text"><%= item.description %></p>
-		    <a href="#" class="btn btn-primary btnshadow"><%= item.price %></a>
+		    <a href="#"><%= link_to "See more", item_path(item.id),  class:"btn btn-primary btnshadow"%></a>
 		  </div>
 		</div>
 	<% end %>
@@ -28,9 +28,6 @@
     </li>
     <li class="page-item">
       <a class="page-link" href="#">4</a>
-    </li>
-    <li class="page-item">
-      <a class="page-link" href="#">5</a>
     </li>
     <li class="page-item">
       <a class="page-link" href="#">&raquo;</a>

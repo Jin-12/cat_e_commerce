@@ -1,13 +1,19 @@
 class CartsController < ApplicationController
+=begin
   before_action :set_cart, only: [:show, :edit, :update, :destroy]
   before_action :logged_in_user, only: [:create, :edit, :update, :destroy, :show]
   rescue_from ActiveRecord::RecordNotFound, with: :invalid_cart
-
+=end
 
   def index
-
     @item = @cart.items
+  end
+
+  def show
+    @item = Item.all
+  end
     
+=begin
   end
 
   def create
@@ -31,5 +37,5 @@ class CartsController < ApplicationController
   def cart_params
     params[:cart]
   end
-
+=end
 end
