@@ -1,6 +1,5 @@
 class ItemController < ApplicationController
   def index
-  	@items = Item.all.sort_by &:created_at
   end
 
   def show

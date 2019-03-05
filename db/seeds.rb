@@ -5,15 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-<<<<<<< HEAD
 5.times do
 User.create(email: Faker::Internet.email, password: "mypassword", password_confirmation: "mypassword")
 end
-=======
-    5.times do
-    User.create(email: Faker::Internet.email, password: "mypassword", password_confirmation: "mypassword")
-    end
->>>>>>> delivery
     
 20.times do
 Item.create(title: Faker::Name.middle_name ,description: Faker::Lorem.paragraph , price: rand(1..100), image_url: "https://wallimpex.com/data/out/586/funny-cat-pic-9466797.jpg")

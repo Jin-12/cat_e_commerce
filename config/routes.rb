@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resources :item, only: [:show]
   resources :users, only: [:index, :show, :edit, :create]
   resources :carts, only: [:show]
+  resources :join_table_carts_items 
 end
