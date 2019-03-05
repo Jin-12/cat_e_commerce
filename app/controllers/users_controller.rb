@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user!, only: [:show, :edit, :update]
+  before_action :check_user, only: [:show, :edit, :update]
 
   def index
     @users = User.all
@@ -11,4 +11,14 @@ class UsersController < ApplicationController
     puts params
   end
 
+private
+
+  def check_user
+    authenticate_user!
+    if current_user != @user
+      redirect_to root_path, alert: "sorry, not your profile"
+    end
+  end
+
+  
 end
