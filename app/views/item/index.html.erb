@@ -1,12 +1,13 @@
 <div class="contain">
 
-	<% @items.each do |item| %>
+	<% Item.all.each do |item| %>
 		<div class="card" style="width: 18rem;">
 		  <%= image_tag("#{item.image_url}", class: 'card-img-top', alt: "Card image cap") %>
 		  <div class="card-body">
-		    <h5 class="card-title"><%= item.title %></h5>
+		    <h5 class="card-title"><%= link_to item.title , item_path(item.id) %></h5>
 		    <p class="card-text"><%= item.description %></p>
-		    <a href="#" class="btn btn-primary btnshadow"><%= item.price %></a>
+        <p><%= item.price %>$</p>
+		    <a href="#" class="btn btn-primary btnshadow">Ajouter au panier</a>
 		  </div>
 		</div>
 	<% end %>
