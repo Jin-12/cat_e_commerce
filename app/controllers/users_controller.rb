@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :check_user, only: [:show, :edit, :update]
+  before_action :authenticate_user!, only: [:show, :edit, :update]
 
   def index
     @users = User.all
@@ -7,18 +7,12 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    puts "#" * 50
-    puts params
-  end
-
-private
-
-  def check_user
-    authenticate_user!
     if current_user != @user
-      redirect_to root_path, alert: "sorry, not your profile"
+      # TODO Put a flash msg here
+      puts "NOT THE RIGHT USER, SORRY"
+      redirect_to root_path
     end
+    @user = User.find(params[:id])
   end
-
   
 end
