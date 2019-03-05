@@ -7,6 +7,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   </head>
 
 
@@ -21,8 +22,6 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/united/bootstrap.min.css">
 
-    <title>Hello, world!</title>
-
 
 
   </head>
@@ -36,20 +35,24 @@
 
   <div class="collapse navbar-collapse" id="navbarColor01">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      <li class="nav-item">
+        <%= link_to 'Home', root_path, class:"nav-link-hover nav-link" %> </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
+        <%= link_to 'Home', root_path, class:"nav-link-hover nav-link" %> </a>
       </li>
     </ul>
   </div>
+
+      <div class="navbar-collapse collapse w-100 order-3 dual-collapse2 test-menu">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+         </li>
+         <li>
+           <a class="list-group-item" href="#"><i class="fa  fa-shopping-cart fa-fw" aria-hidden="true"></i>&nbsp; Cart</a>
+          </li>
+        </ul>
+    </div>
 </nav>
   <body>
 
