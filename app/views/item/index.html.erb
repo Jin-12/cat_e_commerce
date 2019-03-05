@@ -1,2 +1,39 @@
-<h1>Item#index</h1>
-<p>Find me in app/views/item/index.html.erb</p>
+<div class="contain">
+
+	<% @items.each do |item| %>
+		<div class="card" style="width: 18rem;">
+		  <%= image_tag("#{item.image_url}", class: 'card-img-top', alt: "Card image cap") %>
+		  <div class="card-body">
+		    <h5 class="card-title"><%= item.title %></h5>
+		    <p class="card-text"><%= item.description %></p>
+		    <a href="#" class="btn btn-primary btnshadow"><%= item.price %></a>
+		  </div>
+		</div>
+	<% end %>
+</div>
+
+<div class="page_number">
+  <ul class="pagination col-md-2 col-md-offset-5">
+    <li class="page-item disabled">
+      <a class="page-link" href="#">&laquo;</a>
+    </li>
+    <li class="page-item active">
+      <a class="page-link" href="#">1</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="#">2</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="#">3</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="#">4</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="#">5</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="#">&raquo;</a>
+    </li>
+  </ul>
+</div>

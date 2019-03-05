@@ -1,2 +1,12 @@
-<h1>Item#show</h1>
-<p>Find me in app/views/item/show.html.erb</p>
+<div class='container-show'>
+	<div class="grille-1-show">
+		<%= image_tag("#{@item.image_url}", class: 'card-img-top', height: "350px") %>
+	</div>
+
+	<div class="grille-2-show">
+		<h1><%= @item.title %></h1>
+		<p class="price-show"><b>Price : <%= @item.price %>$</b></p>
+		<p>Description : <%= @item.description %></p>
+		<button class="btn-buy-product">Ajouter au panier</button>
+	</div>
+</div>
