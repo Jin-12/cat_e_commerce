@@ -38,10 +38,10 @@ gem 'bootstrap'
 gem 'font-awesome-rails'
 gem 'jquery-rails'
 gem 'simple_form'
+gem 'dotenv-rails'
 gem 'devise'
 gem 'devise-i18n'
 gem 'devise-bootstrap-views', '~> 1.0'
-gem 'dotenv-rails'
 gem 'stripe'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
@@ -50,6 +50,8 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'awesome_print'
+  gem 'rspec-rails', '~> 3.8'
+  gem 'factory_bot_rails'
   gem 'pry'
   gem 'pry-rails'
 end
@@ -70,13 +72,11 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
+  gem 'shoulda-matchers', '4.0.0.rc1'
+  gem 'rails-controller-testing'
+  gem "nyan-cat-formatter"
+
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
-gem 'jquery-rails'
-gem 'font-awesome-rails'
-gem 'bootstrap'
-gem 'stripe'
-gem 'dotenv'
