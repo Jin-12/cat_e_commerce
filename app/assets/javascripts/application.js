@@ -17,3 +17,13 @@
 //= require popper
 //= require bootstrap
 //= require_tree .
+
+//= require jquery
+//= require popper.min
+//= require bootstrap
+//= require mdb
+//= require custom
+//= require rails-ujs
+//= require activestorage
+//= require turbolinks
+//= require_tree .
