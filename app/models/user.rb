@@ -3,13 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
   has_one :cart
   has_many :orders
-
-after_create :set_cart
-
-
-  def set_cart
-    Cart.create(user_id: current_user.id)
-  end 
 end
