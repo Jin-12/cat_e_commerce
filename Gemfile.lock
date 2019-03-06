@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/stympy/faker.git
+  revision: a2ed2f3e9902ce481d69f5516dd54b92e6cf9afc
+  branch: master
+  specs:
+    faker (1.9.3)
+      i18n (>= 0.7)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -99,8 +107,6 @@ GEM
       railties (>= 3.2, < 6.1)
     erubi (1.8.0)
     execjs (2.7.0)
-    faker (1.9.2)
-      i18n (>= 0.7)
     faraday (0.15.4)
       multipart-post (>= 1.2, < 3)
     ffi (1.10.0)
@@ -268,7 +274,7 @@ DEPENDENCIES
   devise-bootstrap-views (~> 1.0)
   devise-i18n
   dotenv-rails
-  faker
+  faker!
   font-awesome-rails
   jbuilder (~> 2.5)
   jquery-rails
