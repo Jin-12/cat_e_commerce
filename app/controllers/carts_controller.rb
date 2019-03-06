@@ -1,14 +1,16 @@
 class CartsController < ApplicationController
   before_action :set_cart, only: [:show, :edit, :update, :destroy]
-  before_action :logged_in_user, only: [:create, :edit, :update, :destroy, :show]
   rescue_from ActiveRecord::RecordNotFound, with: :invalid_cart
 
 
   def index
-
     @item = @cart.items
-    
   end
+
+  def show
+    @item = current_user.cart.items
+    
+  end 
 
   def create
     @cart = Cart.new(cart_params)
@@ -23,7 +25,7 @@ class CartsController < ApplicationController
   private
 
   def set_cart
-    @cart = current_user.carts.find_by(id: session[:cart_id]) || current_user.carts.create
+    @cart = Cart.find_by(user_id: current_user.id) || Cart.create(user_id: current_user.id)
     session[:cart_id] = @cart.id
   end
 

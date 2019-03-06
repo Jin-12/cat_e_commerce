@@ -1,5 +1,50 @@
-<h1>Cart#index</h1>
-<p>Find me in app/views/cart/index.html.erb</p>
-<% @item.all each do |item| %>
-<%= item.title %> 
-<% end %> 
+<!------ Include the above in your HEAD tag ---------->
+<% total = 0 %>
+
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+<div class="enable-bootstrap">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <div class="container">
+        <table id="cart" class="table table-hover table-condensed">
+        <thead>
+            <tr>
+                <th style="width:90%">Product</th>
+                <th style="width:15%">Price</th>
+                <th style="width:5%"></th>
+            </tr>
+        </thead>
+            <% @item.each do |item| %>
+        <tbody>
+            <tr>
+                <td data-th="Product">
+                    <div class="row">
+                        <div class="col-sm-2 hidden-xs"><%= image_tag("#{item.image_url}",class:"img-responsive") %></div>
+                        <div class="col-sm-10">
+                            <h4 class="nomargin"><%= item.title %> </h4>
+                            <p><%= item.description %></p>
+                        </div>
+                    </div>
+                </td>
+                <td data-th="Price"><%= item.price %> $</td>
+                <td class="actions" data-th="">
+                    <button class="btn btn-info btn-sm"><i class="fa fa-refresh"></i></button>
+                    <button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button>                                
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr class="visible-xs">
+                <td class="text-center"><strong><%= total = total + item.price %> $</strong></td>
+            <% end %> 
+            </tr>
+            <tr>
+                <td><a href="#" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
+                <td class="hidden-xs text-center"><strong><%= total %> $</strong></td>
+                <td><a href="#" class="btn btn-success btn-block">Checkout <i class="fa fa-angle-right"></i></a></td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+</div>
