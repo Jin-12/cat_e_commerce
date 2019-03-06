@@ -19,8 +19,13 @@
       <ul>
         <li>Price : <%= @item.price %>$</li>
       </ul>
+      <!-- TODO Add user_signed_in? -->
+      <% if user_signed_in? %>
       <%= link_to "Ajouter au panier", {:controller => "join_table_carts_items", :action => "create", :item_id => @item.id, class:"btn-buy-product"} %>
-
+      <% else %>
+      <button class="btn-buy-product"><%= link_to "Ajouter au panier (connexion)", user_session_path %></button>
+      
+      <% end %>
     </div>
 
   </div>
