@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   end 
   resources :orders, only: [:create, :index, :destroy, :show]
   resources :join_table_orders_items
+  resources :charges
 
 end
