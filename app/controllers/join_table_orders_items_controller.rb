@@ -7,15 +7,14 @@ class JoinTableOrdersItemsController < ApplicationController
     end
 
     def create
-        puts "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$"
         @ord = Order.create(user_id: current_user.id)
         @item = current_user.cart.items
         @item.each do |item|
-        @oi = JoinTableOrdersItem.create(item_id: item.id, order_id: @ord.id)
+        JoinTableOrdersItem.create(item_id: item.id, order_id: @ord.id)
         end 
-        puts "OOOOOOOOOOOJOJOJIONBPIUBPIBLBLUBPIUBOUBLBNPIBPIDUBOUDBPIUDBIUDNODIBO"
         redirect_to root_path
-        session[:order_id] = @ord.id
+        current_user.cart.destroy
+
     end
 
     def destroy
