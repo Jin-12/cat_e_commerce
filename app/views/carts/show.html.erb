@@ -40,7 +40,8 @@
             <% end %> 
             </tr>
             <tr>
-                <td><%= link_to "< Continue Shopping", root_path, class:"btn btn-warning" %></td>
+                <td>
+                <%= link_to "Continue Shopping", root_path, class:"btn btn-warning" %>
                 <td class="hidden-xs text-center"><strong><%= total %> $</strong></td>
                 <td><%= link_to "Valider le panier >", {:controller => "join_table_orders_items", :action => "create"}, class:"btn btn-success btn-block" %></td>
             </tr>
