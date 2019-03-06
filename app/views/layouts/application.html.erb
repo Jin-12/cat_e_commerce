@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<<<<<<< HEAD
   <head>
         <title><%= full_title(yield(:title)) %></title>
         <%= csrf_meta_tags %>
@@ -23,12 +24,32 @@
 
   </head>
   <body>
+=======
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="style.css" />
+  <%= stylesheet_link_tag "style" %>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/united/bootstrap.min.css">
+  <title>
+    <%= full_title(yield(:title)) %>
+  </title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+>>>>>>> delivery
   <%= render 'shared/navbar' %>
   <%= render 'shared/flash' %>
 
   <%= yield %>
 
-
   <%= render 'shared/footer' %>
 </body>
+
 </html>
