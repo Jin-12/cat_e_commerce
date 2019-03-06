@@ -8,7 +8,11 @@
 5.times do
 User.create(email: Faker::Internet.email, password: "mypassword", password_confirmation: "mypassword")
 end
-
+    
 20.times do
-Item.create(title: Faker::Name.middle_name, description: Faker::Lorem.paragraph, price: rand(1..100), image_url: 'http://golem13.fr/wp-content/uploads/2017/11/chat-double-face-chim%C3%A8re-700x460.jpg')
+Item.create(title: Faker::Name.middle_name,
+description: Faker::Lorem.paragraph,
+price: rand(1..100),
+image_url: Faker::LoremFlickr.image)
 end
+

@@ -1,12 +1,17 @@
 <div class="contain">
 
-	<% @items.each do |item| %>
+	<% Item.all.each do |item| %>
 		<div class="card" style="width: 18rem;">
 		  <%= image_tag("#{item.image_url}", class: 'card-img-top', alt: "Card image cap") %>
 		  <div class="card-body">
-		    <h5 class="card-title"><%= item.title %></h5>
+		    <h5 class="card-title"><%= link_to item.title , item_path(item.id) %></h5>
 		    <p class="card-text"><%= item.description %></p>
-		    <a href="#" class="btn btn-primary btnshadow"><%= item.price %></a>
+        <p><%= item.price %>$</p>
+        <% if user_signed_in? %> 
+        <%= link_to "Ajouter au panier", {:controller => "join_table_carts_items", :action => "create", :item_id => item.id}, class:"btn btn-primary btnshadow" %>
+        <% else %> 
+        <%= link_to "Ajouter au panier", user_session_path, class:"btn btn-primary btnshadow" %>
+        <% end %> 
 		  </div>
 		</div>
 	<% end %>
