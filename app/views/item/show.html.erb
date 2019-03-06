@@ -22,6 +22,8 @@
       <!-- TODO Add user_signed_in? -->
       <% if user_signed_in? %>
       <button class="btn-buy-product">Ajouter au panier</button>
+      <% else %>
+      <%= link_to "Se connecter pour ajouter au panier", user_session_path, class: "btn-buy-product" %>
       <% end %>
     </div>
 
