@@ -20,7 +20,9 @@
         <li>Price : <%= @item.price %>$</li>
       </ul>
       <!-- TODO Add user_signed_in? -->
+      <% if user_signed_in? %>
       <button class="btn-buy-product">Ajouter au panier</button>
+      <% end %>
     </div>
 
   </div>
