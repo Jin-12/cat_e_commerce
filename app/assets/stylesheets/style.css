@@ -80,21 +80,51 @@ body {
   outline:0;
 }
 
-.btn-buy-product {
-  background: black;
-  color: white;
-  width: 400px;
-  height: 50px;
-  font-weight: bold;
-  font-style: uppercase;
+.btn-buy-product a {
+  text-decoration: none;
+  color: #FFFFFF;
   outline:0;
 }
 
+.btn-buy-product a:hover {
+  text-decoration: none;
+  color: #FFFFFF;
+  outline:0;
+}
+
+.btn-buy-product {
+  background: #167FFB;
+  text-decoration: none;
+  width: 150px;
+  height: 50px;
+  outline:0;
+  border: none;
+  border-radius: 30px;
+  transition: 0.5s cubic-bezier(0.2, 0.8,0.2,1);
+}
+
 .btn-buy-product:hover {
-  background: #e85420;
+  text-decoration: none;
+  background: #66adff;
   color: white;
   transition: 0.1s;
   outline:0;
+  transform: translateY(-2px);
+  transition: 0.3s cubic-bezier(0.2, 0.8,0.2,1);
+}
+
+.card-title-index a{
+  text-decoration: none;
+  font-size: 30px;
+  color: black;
+}
+
+.price-product {
+  font-size: 30px;
+}
+
+.title-product {
+  font-size: 50px;
 }
 
 #bold-text-span {
