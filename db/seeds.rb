@@ -10,5 +10,8 @@
     end
     
     20.times do
-    Item.create(title: Faker::Name.middle_name ,description: Faker::Lorem.paragraph , price: rand(1..100), Faker::LoremFlickr.image)
+    Item.create(title: Faker::Name.middle_name,
+                description: Faker::Lorem.paragraph,
+                price: rand(1..100),
+                image_url: Faker::LoremFlickr.image)
     end
