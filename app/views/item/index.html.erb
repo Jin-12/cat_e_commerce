@@ -7,7 +7,11 @@
 		    <h5 class="card-title"><%= link_to item.title , item_path(item.id) %></h5>
 		    <p class="card-text"><%= item.description %></p>
         <p><%= item.price %>$</p>
-		    <a href="#" class="btn btn-primary btnshadow">Ajouter au panier</a>
+        <% if user_signed_in? %> 
+        <%= link_to "Ajouter au panier", {:controller => "join_table_carts_items", :action => "create", :item_id => item.id}, class:"btn btn-primary btnshadow" %>
+        <% else %> 
+        <%= link_to "Ajouter au panier", user_session_path, class:"btn btn-primary btnshadow" %>
+        <% end %> 
 		  </div>
 		</div>
 	<% end %>
