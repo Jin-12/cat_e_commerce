@@ -135,10 +135,46 @@ body {
     content: attr(data-th); font-weight: bold;
     display: inline-block; width: 8rem;
   }
-  
-  
-  
+    
   table#cart tfoot td{display:block; }
   table#cart tfoot td .btn{display:block;}
-  
+}
+
+  footer {
+  background-color: #151512;
+  padding-top: 100px;
+  }
+
+  footer H5 {
+  color : #FFFFFF;
+  padding-bottom: 10px;
+  text-align: center;
+  }
+
+  footer p {
+  color : #FFFFFF;
+  padding-top : 10px;
+}
+
+footer .socialmedia {
+
+}
+
+.footer-content {
+  display:block;
+  text-align: center;
+  padding-top: -20px;
+ }
+
+ .fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.fa:hover {
+  opacity: 0.7;
+  text-decoration: none;
 }
