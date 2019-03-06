@@ -297,6 +297,7 @@ DEPENDENCIES
   devise
   devise-bootstrap-views (~> 1.0)
   devise-i18n
+  dotenv
   dotenv-rails
   faker!
   font-awesome-rails
