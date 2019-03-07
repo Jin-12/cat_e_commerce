@@ -2,7 +2,7 @@
 
 	<% Item.all.each do |item| %>
 		<div class="card" style="width: 18rem;">
-		  <%= image_tag("#{item.image_url}", class: 'card-img-top', alt: "Card image cap") %>
+		  <%= image_tag(item.cat_image, class: 'card-img-top', alt: "Card image cap") %>
 		  <div class="card-body">
 		    <p class="card-title-index"><%= link_to item.title , item_path(item.id) %></p>
 		    <p class="card-text"><%= item.description %></p>
@@ -11,7 +11,7 @@
         <%= link_to "Add to Cart", {:controller => "join_table_carts_items", :action => "create", :item_id => item.id}, class:"btn btn-primary btnshadow" %>
         <% else %> 
         <%= link_to "Ajouter au panier", user_session_path, class:"btn btn-primary btnshadow" %>
-        <% end %> 
+        <% end %>
 		  </div>
 		</div>
 	<% end %>
@@ -33,9 +33,6 @@
     </li>
     <li class="page-item">
       <a class="page-link" href="#">4</a>
-    </li>
-    <li class="page-item">
-      <a class="page-link" href="#">5</a>
     </li>
     <li class="page-item">
       <a class="page-link" href="#">&raquo;</a>
