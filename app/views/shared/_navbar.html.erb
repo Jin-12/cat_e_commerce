@@ -7,38 +7,35 @@
     <div class="collapse navbar-collapse" id="navbarColor01">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <%= link_to "Home", root_path, class: "nav-link" %>
+          <%= link_to "Home", root_path, class: "nav-link nav-link-hover" %>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Log in", user_session_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-            <%= link_to "Sign up", new_user_registration_path, class: "nav-link" %>
-          </li>
+          <% if user_signed_in?  %>
           <li class="nav-item">
-            <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+            <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "nav-link nav-link-hover" %>
           </li>
-
+        <% else %>
+        <li class="nav-item">
+          <%= link_to "Log in", user_session_path, class: "nav-link nav-link-hover" %>
+        </li>
+        <li class="nav-item">
+            <%= link_to "Sign up", new_user_registration_path, class: "nav-link nav-link-hover" %>
+          </li>
+          <% end %>
         </ul>
     </div>
+
           <div class="navbar-collapse collapse ">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
          </li>
          <% if user_signed_in?  %>
+          <li><%= link_to "Profile", user_path(current_user.id), class:"btn btn-primary" %>
+          </li>
+          <% end %> 
+         <% if user_signed_in?  %>
           <li><%= link_to "Cart", cart_path(current_user.id), class:"btn btn-primary" %>
           </li>
           <% end %> 
         </ul>
-    </div>
   </nav>
   

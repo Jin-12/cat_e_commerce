@@ -2,7 +2,6 @@
 
   <!-- Portfolio Item Heading -->
   <h1 class="my-4">
-    <%= @item.title %>
     <small></small>
   </h1>
 
@@ -14,24 +13,16 @@
     </div>
 
     <div class="col-md-4">
-      <h3 class="my-3">
-        <%= @item.title %>
-      </h3>
-      <p>
-        <%= @item.description %>
-      </p>
-      <h3 class="my-3">Project Details</h3>
-      <ul>
-        <li>Price :
-          <%= @item.price %>$</li>
+      <p class="title-product"><%= @item.title %></p>
+      <p><%= @item.description %></p>
+      <p class="price-product"><%= @item.price %> $</p>
       </ul>
       <!-- TODO Add user_signed_in? -->
       <% if user_signed_in? %>
-      <%= link_to "Ajouter au panier", {:controller => "join_table_carts_items", :action => "create", :item_id => @item.id, class:"btn-buy-product"} %>
+     <button class="btn-buy-product btnshadow"><%= link_to "Add to Cart", {:controller => "join_table_carts_items", :action => "create", :item_id => @item.id} %></button>
       <% else %>
-      <button class="btn-buy-product">
-        <%= link_to "Ajouter au panier (connexion)", user_session_path %></button>
-
+      <button class="btn-buy-product btnshadow"><%= link_to "Ajouter au panier (connexion)", user_session_path %></button>
+      
       <% end %>
     </div>
 

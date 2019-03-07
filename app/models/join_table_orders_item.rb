@@ -1,4 +1,4 @@
-class JoinTableOrdersItems < ApplicationRecord
+class JoinTableOrdersItem < ApplicationRecord
     belongs_to :item 
     belongs_to :order
 end
