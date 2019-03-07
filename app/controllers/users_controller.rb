@@ -7,13 +7,13 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    @user = User.find(params[:id].to_i)
   end
 
   private
 
   def correct_user
-    @user = User.find(params[:id])
+    @user = User.find(params[:id].to_i)
     if current_user != @user
       flash[:alert] = "This profile is not accessible"
       redirect_to root_path

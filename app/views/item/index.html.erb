@@ -1,6 +1,13 @@
+<div class="head-header">
+  <div class="header-index">
+   <p> Achetez les plus belles photos de chats de France ! <i class="em em-kissing_cat"></i></p>
+<br>
+   <button class='btn-header-yeah btnshadow'>Scroll pour voir les photos </button>
+  </div>
+  
+</div>
+
 <div class="contain">
-
-
 	<% @items.each do |item| %>
  		<div class="card" style="width: 18rem;">
  		  <%= image_tag(item.cat_image, class: 'card-img-top', alt: "Card image cap") %>
@@ -9,16 +16,11 @@
  		    <p class="card-text"><%= item.description %></p>
          <p><%= item.price %>$</p>
         <% if user_signed_in? %> 
-         <%= link_to "Add to Cart", {:controller => "join_table_carts_items", :action => "create", :item_id => item.id}, class:"btn btn-primary btnshadow" %>
-         <% else %> 
-         <%= link_to "Ajouter au panier", user_session_path, class:"btn btn-primary btnshadow" %>
-         <% end %>
- 		  </div>
- 		</div>
- 	<% end %>
- </div>
-
-<%= will_paginate @items %>
-
-
-
+        <%= link_to "Ajouter au panier", {:controller => "join_table_carts_items", :action => "create", :item_id => item.id}, class:"btn btn-primary btnshadow" %>
+        <% else %> 
+        <%= link_to "Ajouter au panier", user_session_path, class:"btn btn-primary btnshadow" %>
+        <% end %>
+		  </div>
+		</div>
+	<% end %>
+</div>
