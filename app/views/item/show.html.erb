@@ -6,20 +6,20 @@
   </h1>
 
   <!-- Portfolio Item Row -->
-  <div class="row">
+  <div class="main-show-item">
 
-    <div class="col-md-8">
-      <%= image_tag(@item.cat_image,class:"img-fluid") %>
+    <div class="img-show-cart">
+      <%= image_tag(@item.cat_image,class:"radius-b") %>
     </div>
 
-    <div class="col-md-4">
+    <div class="product-detail">
       <p class="title-product"><%= @item.title %></p>
       <p><%= @item.description %></p>
       <p class="price-product"><%= @item.price %> $</p>
       </ul>
       <!-- TODO Add user_signed_in? -->
       <% if user_signed_in? %>
-     <button class="btn-buy-product btnshadow"><%= link_to "Add to Cart", {:controller => "join_table_carts_items", :action => "create", :item_id => @item.id} %></button>
+     <button class="btn-buy-product btnshadow"><%= link_to "Ajouter au panier", {:controller => "join_table_carts_items", :action => "create", :item_id => @item.id} %></button> <i class="em em-cat"></i>
       <% else %>
       <button class="btn-buy-product btnshadow"><%= link_to "Ajouter au panier (connexion)", user_session_path %></button>
       
@@ -30,15 +30,9 @@
   <!-- /.row -->
 
   <!-- Related Projects Row -->
-  <h3 class="my-4">Related Projects</h3>
 
   <div class="row">
-
-    <% 4.times do %>
-    <div class="col-md-3 col-sm-6 mb-4">
-      <a href="#">
-        <%= image_tag(@item.cat_image, class:"img-fluid") %>
-      </a>
+    <div class="margin-b">
     </div>
-    <% end %>
   </div>
+</div>
