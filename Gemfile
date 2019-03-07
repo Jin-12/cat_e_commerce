@@ -41,7 +41,8 @@ gem 'simple_form'
 gem 'devise'
 gem 'devise-i18n'
 gem 'devise-bootstrap-views', '~> 1.0'
-gem 'dotenv-rails'
+gem 'dotenv-rails', require: 'dotenv/rails-now'
+gem 'aws-sdk-s3', require: false
 gem 'stripe'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
