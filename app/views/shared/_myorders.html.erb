@@ -1,15 +1,12 @@
 <% Order.where(user_id: current_user.id).each do |order| %> 
   <% if order.items != nil %> 
-    <div class="card text-center">
-      <div class="card-header">
-        <p> La Commande <%= order.id %></p>
-      </div>
-    <div class="card-body">
+    <div class="command-card">
+        <div class="cart-head"> La Commande <%= order.id %></div>
       <% order.items.each do |item| %>
-        <a><%= item.title %></a>
+        <a class="card-product"><%= item.title %></a>
       <% end %>
+    <div class="card-end"><%= order.created_at %>
+      </div>
     </div>
-    <div class="card-footer text-muted"><%= order.created_at %></div>
-  </div>
   <% end %>
 <% end %>
