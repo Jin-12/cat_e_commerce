@@ -21,10 +21,10 @@ Rails version : 5.2.2
 
 If you want to use the website in local :
 
-``` git clone https://github.com/Jin-12/cat_e_commerce.git ```
-``` bundle install ```
-``` rails db:create ```
-``` rails db:migrate ```
-``` rails db:seed ```
+``` git clone https://github.com/Jin-12/cat_e_commerce.git ```*separate paragraph*
+``` bundle install ```*separate paragraph*
+``` rails db:create ```*separate paragraph*
+``` rails db:migrate ```*separate paragraph*
+``` rails db:seed ```*separate paragraph*
 
 
