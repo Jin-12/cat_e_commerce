@@ -3,6 +3,15 @@ html, body {
     margin: 0;
 }
 
+
+.btn-primary {
+  box-shadow: none;
+}
+
+.btn-primary:hover {
+  box-shadow: none;
+}
+
 body {
   -webkit-font-smoothing: antialiased;
   line-height: 1.3;
@@ -95,7 +104,7 @@ body {
 .btn-buy-product {
   background: #167FFB;
   text-decoration: none;
-  width: 150px;
+  width: 200px;
   height: 50px;
   outline:0;
   border: none;
@@ -207,4 +216,164 @@ footer .socialmedia {
 .fa:hover {
   opacity: 0.7;
   text-decoration: none;
+}
+
+.profil-titre {
+  font-size: 25px;
+}
+
+.main_show_user {
+  padding: 3% 20% 0% 20%;
+  display: grid;
+  background: #F5F7FA;
+}
+
+.profil-historique {
+  font-size: 40px;
+  margin: 0;
+}
+
+.show_user_head {
+  width: 500px;
+  height: 200px;
+  background: grey;
+  text-align: center;
+  padding: 3% 3% 3% 3%;
+  justify-self: center;
+  box-shadow: 0 0 1.5rem 0 rgba(0,0,0,.05);
+  background-color: white;
+  border-radius: .625rem;
+}
+
+
+.command-card {
+  width: 700px;
+  height: 200px;
+  background: grey;
+  text-align: center;
+  padding: 3% 6% 3% 6%;
+  margin: 3%;
+  justify-self: center;
+  box-shadow: 0 0 1.5rem 0 rgba(0,0,0,.05);
+  background-color: white;
+  border-radius: .625rem;
+  position: relative
+}
+
+.product-detail {
+  width: 500px;
+  height: 330px;
+  padding: 20px 60px 20px 60px;
+  background: grey;
+  text-align: left;
+  justify-self: left;
+  box-shadow: 0 0 1.5rem 0 rgba(0,0,0,.05);
+  background-color: white;
+  border-radius: .625rem;
+}
+
+
+.command-card:hover {
+  transform: translateY(-5px);
+  transition: 0.5s cubic-bezier(0.2, 0.8,0.2,1);
+}
+
+.cart-head {
+  font-size: 30px;
+  margin-bottom: 3%;
+}
+
+.card-end{
+  position: absolute;
+  bottom: 20px;
+  left: 37%;
+  color: grey;
+}
+
+.bg-grey{
+  background: #F5F7FA;
+}
+
+.margin-b {
+  margin-bottom: 60px;
+}
+
+.main-show-item {
+  display: grid;
+  padding: 0% 12% 0% 12%;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+}
+
+.img-show-cart {
+  margin-top: 15px;
+}
+
+.radius-b {
+  border-radius: .625rem;
+}
+
+
+.head-header {
+  background: url('https://www.pixelstalk.net/wp-content/uploads/images2/Black-Cat-wallpapers.jpg');
+  height: 700px;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.header-index {
+  margin: 0 auto;
+  max-width: 750px;
+  padding: 150px 50px;
+  text-align: center;
+}
+
+.header-index p{
+  color: rgb(255,255,255);
+  font-size: 40px;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+.em-kissing_cat {
+  font-size: 25px;
+}
+
+.btn-header-yeah:focus{
+  outline:0;
+}
+
+.btn-header-yeah a {
+  text-decoration: none;
+  color: #FFFFFF;
+  outline:0;
+}
+
+.btn-header-yeah a:hover {
+  text-decoration: none;
+  color: #FFFFFF;
+  outline:0;
+}
+
+.btn-header-yeah {
+  background: #FFFFFF;
+  text-decoration: none;
+  width: 300px;
+  height: 50px;
+  outline:0;
+  border: none;
+  border-radius: 30px;
+  transition: 0.5s cubic-bezier(0.2, 0.8,0.2,1);
+}
+
+.btn-header-yeah:hover {
+  text-decoration: none;
+  background: grey;
+  color: black;
+  color: white;
+  transition: 0.1s;
+  outline:0;
+  transform: translateY(-5px);
+  transition: 0.3s cubic-bezier(0.2, 0.8,0.2,1);
 }
