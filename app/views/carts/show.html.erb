@@ -37,7 +37,9 @@
 
            <div class="cart-buttons">       
                 <%= link_to "Ajouter des photos", root_path, class:"btn btn-warning" %>
+                <% if !current_user.cart.items.empty? %>
                <%= link_to "Valider le panier", new_order_path, class:"btn btn-success" %>
+               <% end %>
             </div>
   
 </div>
