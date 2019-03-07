@@ -44,7 +44,9 @@
                 <td>
                 <%= link_to "Continue Shopping", root_path, class:"btn btn-warning" %>
                 <td class="hidden-xs text-center"><strong><%= total %> $</strong></td>
+                <% if !current_user.cart.items.empty? %>
                 <td><%= link_to "Valider le panier", new_order_path, class:"btn btn-success btn-block" %></td>
+                <% end %>
             </tr>
         </tfoot>
     </table>
