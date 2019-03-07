@@ -1,6 +1,6 @@
 class ItemController < ApplicationController
   def index
-    @items = Item.all.paginate(page: params[:page], per_page: 9)
+    @items = Item.all # .paginate(page: params[:page], per_page: 9)
   end
 
   def show
