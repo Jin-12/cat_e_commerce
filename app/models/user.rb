@@ -5,5 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_one :cart
-  has_many :orders
+  has_many :order
+
+  def to_param
+    [id, /\A\w{1,5}/.match(email)].join("-")
+  end
 end

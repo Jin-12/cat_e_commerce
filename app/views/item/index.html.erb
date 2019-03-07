@@ -4,7 +4,7 @@
 		<div class="card" style="width: 18rem;">
 		  <%= image_tag(item.cat_image, class: 'card-img-top', alt: "Card image cap") %>
 		  <div class="card-body">
-		    <p class="card-title-index"><%= link_to item.title , item_path(item.id) %></p>
+		    <p class="card-title-index"><%= link_to item.title , item_path(item) %></p>
 		    <p class="card-text"><%= item.description %></p>
         <p><%= item.price %>$</p>
         <% if user_signed_in? %> 
