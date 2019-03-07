@@ -1,34 +1,33 @@
 <!------ Include the above in your HEAD tag ---------->
 <% total = 0 %>
-
-
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-
 <div class="enable-bootstrap">
-
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+ 
     <div class="container">
         <table id="cart" class="table table-hover table-condensed">
         <thead>
             <tr>
-                <th style="width:90%">Product</th>
-                <th style="width:15%">Price</th>
-                <th style="width:5%"></th>
+                <th style="width:15%">Produit</th>
+                <th style="width:65%">Description</th>
+                <th style="width:10%">Prix</th>
+                <th style="width:10%">Action</th>
             </tr>
         </thead>
             <% @item.each do |item| %>
         <tbody>
             <tr>
-                <td data-th="Product">
+                <td style="width:20%">
                     <div class="row">
-                        <div class="col-sm-2 hidden-xs"><%= image_tag(item.cat_image,class:"img-responsive") %></div>
-                        <div class="col-sm-10">
+                        <div ><%= image_tag(item.cat_image, class:"img-responsive") %>
+                    </div>
+                </td>
+                <td style="width:70%">
+                        <div >
                             <h4 class="nomargin"><%= item.title %> </h4>
                             <p><%= item.description %></p>
                         </div>
                     </div>
                 </td>
-                <td data-th="Price"><%= item.price %> $</td>
+                <td style="width:5%"><%= item.price %> €</td>
                 <td class="actions" data-th="">
                     <button class="btn btn-info btn-sm"><i class="fa fa-refresh"></i></button>
                     <button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button>                                
@@ -36,14 +35,13 @@
             </tr>
         </tbody>
         <tfoot>
-            <tr class="visible-xs">
-                <td class="text-center"><strong><%= total = total + item.price %> $</strong></td>
+           
             <% end %>
-            </tr>
+          
             <tr>
                 <td>
                 <%= link_to "Continue Shopping", root_path, class:"btn btn-warning" %>
-                <td class="hidden-xs text-center"><strong><%= total %> $</strong></td>
+               
                 <td><%= link_to "Valider le panier", new_order_path, class:"btn btn-success btn-block" %></td>
             </tr>
         </tfoot>

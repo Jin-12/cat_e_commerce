@@ -175,9 +175,9 @@ body {
   padding-top: 100px;
   }
 
-  footer H5 {
+  footer H6 {
   color : #FFFFFF;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   text-align: center;
   }
 
@@ -196,7 +196,7 @@ footer .socialmedia {
   padding-top: -20px;
  }
 
- .fa {
+ footer .fa {
   padding: 20px;
   font-size: 30px;
   width: 50px;
@@ -207,4 +207,20 @@ footer .socialmedia {
 .fa:hover {
   opacity: 0.7;
   text-decoration: none;
+}
+
+.img-responsive {
+max-width:150px ;
+}
+
+.actions .fa {
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+}
+
+thead th {
+font-size: 20px;
+text-align: center;
+
 }
