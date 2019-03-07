@@ -222,5 +222,16 @@ max-width:150px ;
 thead th {
 font-size: 20px;
 text-align: center;
-
 }
+
+.cart-buttons {
+  
+ display:inline-flex;
+ justify-content: flex-end;
+
+  }
+
+
+ #price {
+   text-align: center;
+  }
