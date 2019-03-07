@@ -6,12 +6,16 @@
 		  <div class="card-body">
 		    <p class="card-title-index"><%= link_to item.title , item_path(item.id) %></p>
 		    <p class="card-text"><%= item.description %></p>
+<<<<<<< HEAD
+		    <a href="#"><%= link_to "See more", item_path(item.id),  class:"btn btn-primary btnshadow"%></a>
+=======
         <p><%= item.price %>$</p>
         <% if user_signed_in? %> 
         <%= link_to "Add to Cart", {:controller => "join_table_carts_items", :action => "create", :item_id => item.id}, class:"btn btn-primary btnshadow" %>
         <% else %> 
         <%= link_to "Ajouter au panier", user_session_path, class:"btn btn-primary btnshadow" %>
         <% end %> 
+>>>>>>> delivery
 		  </div>
 		</div>
 	<% end %>
@@ -33,9 +37,6 @@
     </li>
     <li class="page-item">
       <a class="page-link" href="#">4</a>
-    </li>
-    <li class="page-item">
-      <a class="page-link" href="#">5</a>
     </li>
     <li class="page-item">
       <a class="page-link" href="#">&raquo;</a>

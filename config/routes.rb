@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'orders/create'
+  get 'orders/new'
+  get 'orders/show'
   devise_for :users
   root 'item#index'
   resources :item, only: [:show] do
@@ -6,11 +9,11 @@ Rails.application.routes.draw do
     resources :cat_images, only: [:create]
   end
   resources :users, only: [:index, :show, :edit, :create]
+
   resources :carts, only: [:show, :destroy] do 
     resources :join_table_orders_items
   end 
-  resources :orders, only: [:create, :index, :destroy, :show]
+  resources :orders
   resources :join_table_orders_items
-  resources :charges
 
 end
