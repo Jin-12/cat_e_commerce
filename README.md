@@ -31,5 +31,6 @@ If you want to use the website in local :
 
 ``` rails db:seed ```
 
+
 ![enter image description here](https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif)
 
