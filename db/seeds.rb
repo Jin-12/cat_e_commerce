@@ -7,8 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'open-uri'
 
+
+User.create(email: "admin.test@yopmail.com", password: "password", password_confirmation: "password")
+
 5.times do
-User.create(email: Faker::Internet.email, password: "mypassword", password_confirmation: "mypassword")
+User.create(email: Faker::Internet.email, password: "password", password_confirmation: "password")
 end
     
 20.times do

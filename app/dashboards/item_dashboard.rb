@@ -29,10 +29,9 @@ class ItemDashboard < Administrate::BaseDashboard
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
-    :join_table_carts_items,
-    :carts,
-    :join_table_orders_items,
-    :orders,
+    :id,
+    :title,
+    :price,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES

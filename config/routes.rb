@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
   namespace :admin do
       resources :users
-      resources :carts
+      # resources :carts
       resources :items
-      resources :join_table_carts_items
-      resources :join_table_orders_items
+      #resources :join_table_carts_items
+      # resources :join_table_orders_items
       resources :orders
 
-      root to: "users#index"
+      root to: "orders#index"
     end
   devise_for :users
   root 'item#index'
