@@ -1,6 +1,4 @@
 <div class="contain">
-
-
 	<% @items.each do |item| %>
  		<div class="card" style="width: 18rem;">
  		  <%= image_tag(item.cat_image, class: 'card-img-top', alt: "Card image cap") %>
@@ -19,6 +17,3 @@
  </div>
 
 <%= will_paginate @items %>
-
-
-
