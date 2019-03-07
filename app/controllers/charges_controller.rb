@@ -1,6 +1,4 @@
 class ChargesController < ApplicationController
-before_create :
-
     def new
     end
     
