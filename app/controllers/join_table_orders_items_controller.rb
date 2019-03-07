@@ -8,9 +8,6 @@ class JoinTableOrdersItemsController < ApplicationController
     end
 
     def create
-        if current_user.cart.items.empty?
-            redirect_to cart_path(current_user.cart.id)
-        else
             @ord = Order.create(user_id: current_user.id)
             @item = current_user.cart.items
             @item.each do |item|
@@ -18,8 +15,6 @@ class JoinTableOrdersItemsController < ApplicationController
             end 
             redirect_to root_path
             current_user.cart.destroy
-        end
-
     end
 
     def destroy
