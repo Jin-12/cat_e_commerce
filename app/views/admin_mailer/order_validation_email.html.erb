@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+
+   <H1> Commande effectuée </H1>
+
+   <table>
+    <tr>
+      <th> Nom du produit </th>
+      <th> Description du produit </th>
+      <th> Prix </th>
+      <th> Produit </th>
+    </tr>
+
+<% @order.items.each do |item| %>
+<tr>
+  <td> <%= item.title %> </td>
+  <td> <%= item.description %> </td>
+  <td> <%= item.price %> <td>
+  <td> <a href=<%= "http://cat-e-commerce.herokuapp.com/item/" + item.id.to_s %>>Produit acheté</a> </td>
+</tr>
+  
+<% end %>
+  </body>
+</html>

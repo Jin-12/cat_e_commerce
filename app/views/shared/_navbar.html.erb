@@ -6,19 +6,19 @@
   
     <div class="collapse navbar-collapse" id="navbarColor01">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <%= link_to "Home", root_path, class: "nav-link nav-link-hover" %>
+        <li class="nav-item">
+          <%= link_to "Accueil", root_path, class: "nav-link nav-link-hover" %>
         </li>
           <% if user_signed_in?  %>
           <li class="nav-item">
-            <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "nav-link nav-link-hover" %>
+            <%= link_to "Deconnexion",destroy_user_session_path, method: :delete, class: "nav-link nav-link-hover" %>
           </li>
         <% else %>
         <li class="nav-item">
-          <%= link_to "Log in", user_session_path, class: "nav-link nav-link-hover" %>
+          <%= link_to "Connexion", user_session_path, class: "nav-link nav-link-hover" %>
         </li>
         <li class="nav-item">
-            <%= link_to "Sign up", new_user_registration_path, class: "nav-link nav-link-hover" %>
+            <%= link_to "Inscription", new_user_registration_path, class: "nav-link nav-link-hover" %>
           </li>
           <% end %>
         </ul>
@@ -29,11 +29,11 @@
           <li class="nav-item">
          </li>
          <% if user_signed_in?  %>
-          <li><%= link_to "Profile", user_path(current_user.id), class:"btn btn-primary" %>
+          <li><%= link_to "Profil", user_path(current_user.id), class:"btn btn-primary" %>
           </li>
           <% end %> 
          <% if user_signed_in?  %>
-          <li><%= link_to "Cart", cart_path(current_user.id), class:"btn btn-primary" %>
+          <li><%= link_to "Panier", cart_path(current_user.id), class:"btn btn-primary" %>
           </li>
           <% end %> 
         </ul>

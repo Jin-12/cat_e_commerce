@@ -9,8 +9,8 @@ class CartsController < ApplicationController
 
   def show
     @item = current_user.cart.items
-    
-  end 
+
+  end
 
   def create
     @cart = Cart.new(cart_params)

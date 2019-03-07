@@ -59,5 +59,6 @@ class OrdersController < ApplicationController
 
     def order_validation_send
         UserMailer.order_validation_email(@ord).deliver_now
+        AdminMailer.order_validation_email(@ord).deliver_now
     end
 end

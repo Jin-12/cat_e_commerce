@@ -1,13 +1,15 @@
+<div class="main_show_user">
+	<div class="show_user_head">
 <% provide(:title, "Profil utilisateur") %>
 
-<h1>Ma page de profil <%= @user.email %></h1>
+<p class="profil-titre">Ma page de profil</p>
+<p> <%= @user.email %></p>
 
-Vue par <%= current_user.email %> (id: <%= current_user.id %>), par le droit !
+<%= link_to "Editer", edit_user_registration_path, class:"btn btn-primary" %>
 
-<%= link_to "Edit registration", edit_user_registration_path %>
-
-<%= link_to "Sign out", destroy_user_session_path, method: :delete %>
-
-<h2>Historique des commandes</h2>
-
+<%= link_to "Deconnexion", destroy_user_session_path, method: :delete, class:"btn btn-primary" %>
+	</div>
+<br><br>
+<center><p class="profil-historique">Historique des commandes <i class="em em-heart_eyes_cat"></i></p></center>
 <%= render 'shared/myorders' %>
+</div>
