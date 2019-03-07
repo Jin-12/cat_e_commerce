@@ -32,5 +32,5 @@ If you want to use the website in local :
 ``` rails db:seed ```
 
 
-![](https://media.giphy.com/media/lJNoBCvQYp7nq/giphy.gif)
+![le chat n'est pas la](https://media.giphy.com/media/lJNoBCvQYp7nq/giphy.gif)
 
