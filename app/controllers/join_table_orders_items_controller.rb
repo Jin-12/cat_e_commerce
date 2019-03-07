@@ -16,7 +16,6 @@ class JoinTableOrdersItemsController < ApplicationController
             @item.each do |item|
                 JoinTableOrdersItem.create(item_id: item.id, order_id: @ord.id)
             end 
-            order_validation_send
             redirect_to root_path
             current_user.cart.destroy
         end
@@ -24,9 +23,5 @@ class JoinTableOrdersItemsController < ApplicationController
     end
 
     def destroy
-    end
-
-    def order_validation_send
-        UserMailer.order_validation_email(@ord).deliver_now
     end
 end
