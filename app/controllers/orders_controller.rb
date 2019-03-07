@@ -21,6 +21,9 @@ class OrdersController < ApplicationController
     end
 
     def create
+        if current_user.cart.items.empty?
+            redirect_to cart_path(current_user.cart.id)
+        else
       @final_price = final_price
 
       # Amount in cents
@@ -52,6 +55,7 @@ class OrdersController < ApplicationController
       flash[:error] = e.message
       redirect_to new_charge_path
       redirect_to 
+        end
     end 
 
     def destroy
