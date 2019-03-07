@@ -29,6 +29,10 @@
           <li class="nav-item">
          </li>
          <% if user_signed_in?  %>
+          <li><%= link_to "Profile", user_path(current_user.id), class:"btn btn-primary" %>
+          </li>
+          <% end %> 
+         <% if user_signed_in?  %>
           <li><%= link_to "Cart", cart_path(current_user.id), class:"btn btn-primary" %>
           </li>
           <% end %> 
