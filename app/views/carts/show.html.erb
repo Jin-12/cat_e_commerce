@@ -37,13 +37,13 @@
         <tfoot>
             <tr class="visible-xs">
                 <td class="text-center"><strong><%= total = total + item.price %> $</strong></td>
-            <% end %> 
+            <% end %>
             </tr>
             <tr>
                 <td>
                 <%= link_to "Continue Shopping", root_path, class:"btn btn-warning" %>
                 <td class="hidden-xs text-center"><strong><%= total %> $</strong></td>
-                <td><%= link_to "Valider le panier >", {:controller => "charges", :action => "new"}, class:"btn btn-success btn-block" %></td>
+                <td><%= link_to "Valider le panier", new_order_path, class:"btn btn-success btn-block" %></td>
             </tr>
         </tfoot>
     </table>

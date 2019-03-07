@@ -9,8 +9,7 @@ Rails.application.routes.draw do
   resources :carts, only: [:show, :destroy] do 
     resources :join_table_orders_items
   end 
-  resources :orders, only: [:create, :index, :destroy, :show]
+  resources :orders
   resources :join_table_orders_items
-  resources :charges
 
 end
