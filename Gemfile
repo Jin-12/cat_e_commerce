@@ -45,7 +45,6 @@ gem 'dotenv-rails'
 gem 'stripe'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
-gem 'administrate'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -81,5 +80,6 @@ gem 'font-awesome-rails'
 gem 'bootstrap'
 gem 'stripe'
 gem 'dotenv'
-gem 'will_paginate', '~> 3.1.1'
-gem 'will_paginate-bootstrap'
+gem 'administrate'
+# gem 'will_paginate', '~> 3.1.1'
+# gem 'will_paginate-bootstrap'
