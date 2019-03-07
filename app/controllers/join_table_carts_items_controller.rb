@@ -11,6 +11,6 @@ class JoinTableCartsItemsController < ApplicationController
     end
 
     def set_cart
-        Cart.create(user_id: current_user.id)
+        @cart = Cart.find_by(user_id: current_user.id) || Cart.create(user_id: current_user.id)
     end
 end
